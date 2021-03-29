@@ -52,7 +52,7 @@ app.layout = html.Div(children=[
 def update_graph(n_clicks, start_date, end_date):
     if start_date is not None and end_date is not None:
         return get_dayahead_prices_fig(['NL', 'AT', 'DE_LU', 'BE', 'FR'],
-                                       pd.Timestamp(start_date), pd.Timestamp(end_date))
+                                       pd.Timestamp(start_date, tz='Europe/Amsterdam'), pd.Timestamp(end_date, tz='Europe/Amsterdam'))
     return {}
 
 
