@@ -27,6 +27,8 @@ def get_dayahead_prices_fig(zones, start, end):
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
+server = app.server
+
 
 app.layout = html.Div(children=[
     html.H1(children='CWE Day Ahead market prices'),
